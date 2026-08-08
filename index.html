@@ -141,7 +141,7 @@
         <p>I am currently a Research Assistant Professor at the Healthcare AI Research Institute, Seoul National University Hospital.</p>
         <!-- <p>Recent projects include a hierarchical multi-agent framework for voice-controlled surgical data, an agentic pipeline that carries clinical research from planning through IRB documentation and reporting, and reasoning adapters for biomedical fact-checking.</p> -->
       </section>
-    <!--
+      <!--
       <section class="block">
         <span class="label">Positions</span>
         <ul class="list">
@@ -151,9 +151,9 @@
           <li><span class="key">2025</span><span class="val">Ph.D., Seoul National University<span class="sub">Bioengineering · Innovative Medical Science</span></span></li>
         </ul>
       </section>
-    -->
+      -->
 
-    <!--
+      <!--
       <section class="block">
         <span class="label">Focus</span>
         <ul class="list">
@@ -163,9 +163,9 @@
           <li><span class="key">Methods</span><span class="val">Parameter-efficient adaptation, LLM evaluation</span></li>
         </ul>
       </section>
-    -->
+      -->
 
-    <!--
+      <!--
       <section class="block">
         <span class="label">Selected work</span>
         <ul class="list">
@@ -174,7 +174,7 @@
           <li><span class="key">2024</span><span class="val"><a href="https://arxiv.org/abs/2408.16264">Integrating Multiple Reasoning LoRAs for Medical Fact Checking</a><span class="sub">arXiv:2408.16264 · Ph.D. dissertation</span></span></li>
           </ul>
       </section>
-    -->
+      -->
 
       <section class="block">
         <span class="label">Elsewhere</span>
@@ -185,33 +185,56 @@
         </ul>
       </section>
 
-      <a class="download" href="Hyeryun_Park_CV_Aug_2026.pdf" download>Download CV (PDF)</a>
+      <a class="download" href="https://drive.google.com/file/d/1Ev6j0OfgijEZXk0ZKZfcG4CnvHjMjCDK/view?usp=drive_link" download>Download CV (PDF)</a>
     </aside>
 
     <!-- ▼ 오른쪽: CV 뷰어 -->
     <section>
       <div class="viewer">
         <div class="viewer-bar">
-          <span class="filename">Hyeryun_Park_CV_Aug_2026.pdf</span>
-          <a class="barlink" href="Hyeryun_Park_CV_Aug_2026.pdf" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <span class="filename" data-cv-name>Hyeryun_Park_CV_Aug_2026.pdf</span>
+          <a class="barlink" data-cv-view href="#" target="_blank" rel="noopener">Open in new tab ↗</a>
         </div>
-
-        <iframe class="viewer-frame"
-                src="Hyeryun_Park_CV_Aug_2026.pdf#view=FitH&amp;toolbar=1"
-                title="Curriculum vitae of Hyeryun Park"></iframe>
-
+ 
+        <iframe class="viewer-frame" data-cv-embed src=""
+                title="Curriculum vitae of Hyeryun Park"
+                allow="autoplay"></iframe>
+ 
         <div class="fallback">
           <p>Your browser can't display the PDF inline.</p>
-          <a class="download" href="Hyeryun_Park_CV_Aug_2026.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+          <a class="download" data-cv-view href="#" target="_blank" rel="noopener">Open CV (PDF)</a>
         </div>
       </div>
     </section>
-
+ 
   </div>
-
+ 
   <footer>
     <span class="label">© 2026 Hyeryun Park · Hosted on GitHub Pages</span>
   </footer>
 </main>
+ 
+<script>
+  /* ============================================================
+     ▼ CV를 갱신할 때 고칠 곳은 여기 두 줄뿐입니다.
+        FILE_ID  : 구글 드라이브 공유 링크의 /d/ 와 /view 사이 문자열
+        FILENAME : 뷰어 상단에 표시할 이름 (표시용일 뿐, 링크와 무관)
+     ============================================================ */
+  const CV = {
+    FILE_ID:  "1Ev6j0OfgijEZXk0ZKZfcG4CnvHjMjCDK",
+    FILENAME: "Hyeryun_Park_CV_Aug_2026.pdf",
+  };
+ 
+  const cvUrl = {
+    view:     `https://drive.google.com/file/d/${CV.FILE_ID}/view`,
+    embed:    `https://drive.google.com/file/d/${CV.FILE_ID}/preview`,
+    download: `https://drive.google.com/uc?export=download&id=${CV.FILE_ID}`,
+  };
+ 
+  document.querySelectorAll("[data-cv-view]").forEach(el => el.href = cvUrl.view);
+  document.querySelectorAll("[data-cv-download]").forEach(el => el.href = cvUrl.download);
+  document.querySelectorAll("[data-cv-embed]").forEach(el => el.src = cvUrl.embed);
+  document.querySelectorAll("[data-cv-name]").forEach(el => el.textContent = CV.FILENAME);
+</script>
 </body>
 </html>
