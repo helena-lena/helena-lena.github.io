@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyeryun Park — Curriculum Vitae</title>
+<meta name="description" content="Hyeryun Park — Research Assistant Professor at Seoul National University Hospital, building language and agent systems for clinical work.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* ▼ 색상은 여기 여섯 줄만 바꾸면 페이지 전체에 반영됩니다 */
+    --paper:#F6F7F5;
+    --ink:#16211F;
+    --accent:#0E5A50;
+    --accent-soft:#E4EDE9;
+    --muted:#6A7A75;
+    --rule:#D7DFDB;
+
+    --display:"Newsreader",Georgia,"Times New Roman",serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--display);
+    font-weight:300;
+    font-size:17px;
+    line-height:1.62;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline;text-underline-offset:3px}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .label{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  .page{max-width:1240px;margin:0 auto;padding:0 28px 72px}
+
+  /* ---------- masthead ---------- */
+  .masthead{padding:56px 0 32px;border-bottom:1px solid var(--rule)}
+  .masthead .label{display:block;margin-bottom:18px}
+  .name{
+    font-size:clamp(40px,7vw,68px);
+    font-weight:400;
+    line-height:1.02;
+    margin:0;
+    letter-spacing:-.02em;
+  }
+  .name .han{color:var(--muted);font-weight:300;font-size:.42em;letter-spacing:0;margin-left:.5em;vertical-align:.28em}
+  .role{
+    margin:16px 0 0;
+    font-size:clamp(19px,2.4vw,24px);
+    font-weight:300;
+    font-style:italic;
+    color:var(--muted);
+    max-width:40ch;
+  }
+
+  /* ---------- layout ---------- */
+  .columns{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:64px;padding-top:44px}
+  @media (max-width:980px){.columns{grid-template-columns:1fr;gap:44px}}
+
+  .block{margin-bottom:36px}
+  .block .label{display:block;padding-bottom:8px;border-bottom:1px solid var(--rule);margin-bottom:14px}
+  .block p{margin:0 0 12px}
+  .block p:last-child{margin-bottom:0}
+
+  .list{list-style:none;margin:0;padding:0}
+  .list li{padding:10px 0;border-bottom:1px dotted var(--rule);display:flex;gap:14px;align-items:baseline}
+  .list li:last-child{border-bottom:none}
+  .list .key{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);flex:0 0 74px;text-transform:uppercase}
+  .list .val{flex:1 1 auto}
+  .list .val .sub{display:block;font-size:14.5px;color:var(--muted);line-height:1.45}
+
+  .download{
+    display:inline-flex;align-items:center;gap:10px;
+    margin-top:6px;padding:11px 20px;
+    background:var(--accent);color:#fff;
+    font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    border-radius:2px;transition:background .18s ease;
+  }
+  .download:hover{background:#0a473f;text-decoration:none;color:#fff}
+
+  /* ---------- document viewer ---------- */
+  .viewer{border:1px solid var(--rule);border-radius:3px;background:#fff;overflow:hidden}
+  .viewer-bar{
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    padding:13px 18px;background:var(--accent-soft);border-bottom:1px solid var(--rule);
+  }
+  .filename{font-family:var(--mono);font-size:12px;color:var(--ink);flex:1 1 240px;word-break:break-all}
+  .barlink{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  .viewer-frame{display:block;width:100%;height:min(1180px,132vh);border:0;background:#fff}
+
+  .fallback{display:none;padding:40px 26px;text-align:center}
+  .fallback p{margin:0 0 20px;color:var(--muted)}
+  /* 휴대폰에서는 iframe PDF가 잘 안 열려서 버튼으로 대체합니다 */
+  @media (max-width:700px){
+    .viewer-frame{display:none}
+    .fallback{display:block}
+  }
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--rule)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .fade{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards}
+    .fade.delay{animation-delay:.08s}
+    @keyframes rise{to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ▼ 이름 / 한 줄 소개 -->
+  <header class="masthead fade">
+    <span class="label">Curriculum Vitae · Updated August 2026</span>
+    <h1 class="name">Hyeryun Park<span class="han">박혜련</span></h1>
+    <p class="role">Building language and agent systems that fit how clinicians actually work.</p>
+  </header>
+
+  <div class="columns">
+
+    <!-- ▼ 왼쪽: 소개 · 이력 · 대표 연구 · 연락처 -->
+    <aside class="fade delay">
+      <section class="block">
+        <span class="label">About</span>
+        <p>I am a Research Assistant Professor at the Healthcare AI Research Institute, Seoul National University Hospital. My work turns free-form clinical language — a surgeon's voice command, a physician's narrative, a research question — into something a system can act on.</p>
+        <p>Recent projects include a hierarchical multi-agent framework for voice-controlled surgical data, an agentic pipeline that carries clinical research from planning through IRB documentation and reporting, and reasoning adapters for biomedical fact-checking.</p>
+      </section>
+
+      <section class="block">
+        <span class="label">Positions</span>
+        <ul class="list">
+          <li><span class="key">2026 –</span><span class="val">Research Assistant Professor<span class="sub">Healthcare AI Research Institute, Seoul National University Hospital</span></span></li>
+          <li><span class="key">2025</span><span class="val">Postdoctoral Researcher<span class="sub">CAMCA, Massachusetts General Hospital / Harvard</span></span></li>
+          <li><span class="key">2025</span><span class="val">Postdoctoral Researcher<span class="sub">Image Guided Precision Cancer Surgery Institute, Korea University</span></span></li>
+          <li><span class="key">2025</span><span class="val">Ph.D., Seoul National University<span class="sub">Bioengineering · Innovative Medical Science</span></span></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <span class="label">Focus</span>
+        <ul class="list">
+          <li><span class="key">Agents</span><span class="val">Multi-agent systems for clinical workflows</span></li>
+          <li><span class="key">Speech</span><span class="val">Voice interaction in the operating room</span></li>
+          <li><span class="key">NLP</span><span class="val">Clinical documentation, biomedical QA, fact-checking</span></li>
+          <li><span class="key">Methods</span><span class="val">Parameter-efficient adaptation, LLM evaluation</span></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <span class="label">Selected work</span>
+        <ul class="list">
+          <li><span class="key">2026</span><span class="val"><a href="https://arxiv.org/abs/2604.12258">Coding-Free and Privacy-Preserving Agentic Framework for Data-Driven Clinical Research</a><span class="sub">arXiv:2604.12258 · under review</span></span></li>
+          <li><span class="key">2025</span><span class="val"><a href="https://arxiv.org/abs/2511.07392">Voice-Interactive Surgical Agent for Multimodal Patient Data Control</a><span class="sub">arXiv:2511.07392 · in revision · <a href="https://github.com/helena-lena/SAOP">SAOP repository</a></span></span></li>
+          <li><span class="key">2024</span><span class="val"><a href="https://arxiv.org/abs/2408.16264">Integrating Multiple Reasoning LoRAs for Medical Fact Checking</a><span class="sub">arXiv:2408.16264 · Ph.D. dissertation</span></span></li>
+          <!-- ▼ href="#" 두 곳(아래 논문 링크, Google Scholar)은 실제 주소로 바꿔주세요 -->
+          <li><span class="key">2023</span><span class="val"><a href="#">Selective UMLS knowledge infusion for biomedical question answering</a><span class="sub">Scientific Reports 13, 14214</span></span></li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <span class="label">Elsewhere</span>
+        <ul class="list">
+          <li><span class="key">Email</span><span class="val"><a href="mailto:hyerpark1115@gmail.com">hyerpark1115@gmail.com</a></span></li>
+          <li><span class="key">Scholar</span><span class="val"><a href="#">Google Scholar</a></span></li>
+          <li><span class="key">GitHub</span><span class="val"><a href="https://github.com/helena-lena">helena-lena</a></span></li>
+        </ul>
+      </section>
+
+      <a class="download" href="cv/Hyeryun_Park_CV_Aug_2026.pdf" download>Download CV (PDF)</a>
+    </aside>
+
+    <!-- ▼ 오른쪽: CV 뷰어 -->
+    <section>
+      <div class="viewer">
+        <div class="viewer-bar">
+          <span class="filename">Hyeryun_Park_CV_Aug_2026.pdf</span>
+          <a class="barlink" href="cv/Hyeryun_Park_CV_Aug_2026.pdf" target="_blank" rel="noopener">Open in new tab ↗</a>
+        </div>
+
+        <iframe class="viewer-frame"
+                src="cv/Hyeryun_Park_CV_Aug_2026.pdf#view=FitH&amp;toolbar=1"
+                title="Curriculum vitae of Hyeryun Park"></iframe>
+
+        <div class="fallback">
+          <p>Your browser can't display the PDF inline.</p>
+          <a class="download" href="cv/Hyeryun_Park_CV_Aug_2026.pdf" target="_blank" rel="noopener">Open CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span class="label">© 2026 Hyeryun Park · Hosted on GitHub Pages</span>
+  </footer>
+</main>
+</body>
+</html>
