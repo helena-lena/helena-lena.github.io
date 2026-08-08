@@ -117,9 +117,10 @@
     display:block;
     width:100%;
     max-width:200px;
-    aspect-ratio:4 / 5;
+    aspect-ratio:400 / 514;
     object-fit:cover;
     object-position:center 20%;
+    border:1px solid var(--rule);
     border-radius:3px;
     margin:0 0 20px;
     background:var(--accent-soft);
@@ -165,7 +166,8 @@
     <aside class="fade delay">
       <section class="block">
         <span class="label">Short Bio</span>
-        <img class="portrait" src="photo.jpg" alt="Hyeryun Park">
+        <img class="portrait" src="photo.jpg", srcset="photo.jpg 1x, photo@2x.jpg 2x", alt="Hyeryun Park" width="400" height="514">
+        <!-- <img class="portrait" src="photo.jpg" alt="Hyeryun Park"> -->
         <p>I am currently a Research Assistant Professor at the Healthcare AI Research Institute (HARI), Seoul National University Hospital (SNUH).</p>
         <p>Research Interest: Medical AI, Multimodal LLM, Agentic AI, AI Safety</p>
         <!-- <p>Recent projects include a hierarchical multi-agent framework for voice-controlled surgical data, an agentic pipeline that carries clinical research from planning through IRB documentation and reporting, and reasoning adapters for biomedical fact-checking.</p> -->
@@ -210,14 +212,14 @@
         <ul class="list">
           <li><span class="key">Email</span><span class="val"><a href="mailto:hyerpark1115@gmail.com">hyerpark1115@gmail.com</a></span></li>
           <li><span class="key">Scholar</span><span class="val"><a href="https://scholar.google.com/citations?user=nP50fLsAAAAJ&hl=ko">Google Scholar</a></span></li>
-          <li><span class="key">Linkedin</span><span class="val"><a href="https://www.linkedin.com/in/helena15park/">Linkedin</a></span></li>
+          <li><span class="key">Linkedin</span><span class="val"><a href="https://www.linkedin.com/in/helena15park/">helena15park</a></span></li>
           <li><span class="key">GitHub</span><span class="val"><a href="https://github.com/helena-lena">helena-lena</a></span></li>
         </ul>
       </section>
 
       <section class="block">
         <span class="label">Message to Share</span>
-          <p>Become a shining star even in the dark of night 🌟 There is strength and brightness within you 😊</p>
+          <p>Become a shining star, even in the dark of night 🌟 There is strength and brightness within you 😊</p>
           <p>Thank you for your interest :)</p>
         </ul>
       </section>
